@@ -1,0 +1,629 @@
+.MainContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(to right, #cfc, #690 100%);
+  overflow-x: hidden;
+}
+
+/* BOX AFTER REGISTER CORRECT */
+
+.RegisterAccept {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #690, #bfff80);
+  height: 80vh;
+  width: 40%;
+  margin-right: 50%;
+  border-radius: 2rem;
+  z-index: 2;
+  animation-name: animos;
+  animation-duration: 0.7s;
+}
+
+.RegisterAccept .FirstText {
+  text-align: center;
+}
+
+.RegisterAccept .FirstText h1 {
+  font-size: 5vw;
+}
+
+.RegisterAccept .FirstText h1 span {
+  color: #213300;
+}
+
+.RegisterAccept h2 {
+  font-size: 2.5vw;
+  color: #426600;
+}
+
+.RegisterAccept .ImgBox img {
+  width: 25%;
+  margin-bottom: 25px;
+}
+
+.RegisterAccept .ImgBox button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: 21vw;
+  bottom: 20vh;
+  padding: 5vh;
+  height: 2vw;
+  width: 15vw;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px #004d00;
+  color: white;
+  font-size: 4vh;
+  background: linear-gradient(to right, #4f9900, #77b300);
+  transition: all 0.1s;
+}
+
+.RegisterAccept .ImgBox button:hover {
+  box-shadow: 2px 2px 9px -1px #00e600;
+  transform: translateX(-3px);
+  z-index: 0;
+}
+
+/* REGISTER STATUS */
+
+.RegisterStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vh;
+  text-shadow: 1px 1px 2px black, 0 0 25px #e63900, 0 0 5px #f63;
+  width: 25vw;
+  height: 7vh;
+  background-color: #ff531a;
+  border-radius: 5px;
+  z-index: 1;
+  animation-name: animos;
+  animation-duration: 0.7s;
+}
+
+@keyframes animos {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* LEFT SIDE */
+
+.MainContainer .RegisterBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #690, #bfff80);
+  height: 44vw;
+  width: 40%;
+  margin-right: 50%;
+  border-radius: 2rem;
+  box-shadow: 1rem 0.1rem 5rem 0.2rem #334d00;
+  z-index: 1;
+}
+
+.MainContainer .RegisterBox .MainText {
+  position: absolute;
+  color: #1a1a1a;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px #004d00;
+  font-size: 2.5vw;
+  top: 1.5vw;
+}
+
+.MainContainer .RegisterBox .RegisterForm {
+  margin-top: 2%;
+}
+
+.MainContainer .RegisterBox .RegisterForm form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.MainContainer .RegisterBox .RegisterForm form label {
+  margin-left: 0.5%;
+  color: #262626;
+  font-size: small;
+}
+
+.MainContainer .RegisterBox .RegisterForm form input {
+  border: none;
+  outline: 1px solid green;
+  box-shadow: 1px 1px 5px 1px #6c0;
+  height: 5vh;
+  width: 26vw;
+  margin-bottom: 8%;
+  transition: all 0.1s ease-out;
+}
+
+.MainContainer .RegisterBox .RegisterForm form input:focus {
+  outline: none;
+  border: none;
+}
+
+.MainContainer .RegisterBox .RegisterForm form input:hover {
+  outline: 1px solid #a6ff4d;
+  box-shadow: 1px -0.4px 15px 1px #ceff99;
+}
+
+.MainContainer .RegisterBox .RegisterForm form .InteractiveBox {
+  position: relative;
+}
+
+.MainContainer .RegisterBox .RegisterForm form .InteractiveBox .InputCheckbox {
+  position: absolute;
+  border-radius: 5px;
+  width: 5vh;
+  height: 5vh;
+  bottom: 0.1vh;
+  accent-color: #090;
+}
+
+.MainContainer .RegisterBox .RegisterForm .BottonSubmit {
+  color: #1a1a1a;
+  background: linear-gradient(to right, #4f9900, #77b300);
+  margin-left: 8%;
+  margin-right: 8%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s ease-out;
+}
+
+.MainContainer .RegisterBox .RegisterForm .BottonSubmit:hover {
+  box-shadow: 1px -0.4px 15px 1px #00b300;
+  transform: scale(1.05);
+}
+
+.MainContainer .RegisterBox .Footer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  text-align: center;
+}
+
+.MainContainer .RegisterBox .Footer p {
+  color: #595959;
+  font-size: 15px;
+  bottom: 0;
+}
+
+.MainContainer .RegisterBox .Footer a {
+  color: #262626;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* RIGHT SIDE */
+
+.MainContainer .DescriptionBox {
+  position: absolute;
+  left: 54%;
+  top: 1vw;
+  width: 100%;
+  height: 30%;
+}
+
+.MainContainer .DescriptionBox .TextOne {
+  font-size: calc(2rem + 4vw);
+  position: absolute;
+}
+
+.MainContainer .DescriptionBox .TextTwo {
+  position: absolute;
+  top: 10vw;
+}
+
+.MainContainer .DescriptionBox .TextThree {
+  position: absolute;
+  top: 16vw;
+  z-index: 1;
+}
+
+.MainContainer .ImageBox .Park {
+  right: 9%;
+  bottom: 0;
+  width: calc(250px + 15vw);
+  position: absolute;
+  z-index: 0;
+}
+
+/* MEDIA QUERIES DISPLAY */
+
+@media (max-width: 1024px) and (max-height: 768px) {
+  /* LEFT SIDE */
+
+  .MainContainer .RegisterBox .MainText {
+    top: 2.5%;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form {
+    margin-bottom: 1vw;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form input {
+    margin-bottom: 4%;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form .InteractiveBox .InputCheckbox {
+    width: 6vh;
+    height: 6vh;
+    bottom: -0.1vw;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm .BottonSubmit {
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 1vw;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .MainContainer .RegisterBox .Footer {
+    bottom: -1vw;
+  }
+
+  .MainContainer .RegisterBox .Footer p {
+    font-size: 1.5vw;
+  }
+
+  .MainContainer .RegisterBox .Footer a {
+    font-size: 1.5vw;
+  }
+
+  /* RIGHT SIDE */
+
+  .MainContainer .DescriptionBox {
+    left: 51%;
+    top: 5%;
+  }
+
+  .MainContainer .DescriptionBox .TextOne {
+    font-size: calc(2rem + 5vh);
+  }
+
+  .MainContainer .DescriptionBox .TextTwo {
+    font-size: calc(2rem + 1.7vh);
+    top: 17.5vh;
+  }
+
+  .MainContainer .DescriptionBox .TextThree {
+    font-size: calc(1rem + 1vh);
+    top: 33vh;
+  }
+
+  .MainContainer .ImageBox .Park {
+    width: calc(150px + 25vh);
+  }
+
+  /* BOX AFTER CORRECT */
+
+  .RegisterAccept {
+    position: relative;
+  }
+
+  .RegisterAccept .ImgBox img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 15vw;
+  }
+
+  .RegisterAccept .ImgBox button {
+    position: absolute;
+    left: 0;
+    bottom: 12vh;
+  }
+
+  .RegisterAccept .FirstText {
+    position: absolute;
+    top: 0;
+    text-align: center;
+  }
+
+  .RegisterAccept h2 {
+    position: absolute;
+    right: 4vw;
+    top: 35vh;
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 400px) and (max-width: 1100px) {
+  /* LEFT SIDE */
+
+  .MainContainer .RegisterBox .MainText {
+    top: 2.5%;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form {
+    margin-bottom: 0;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form input {
+    margin-bottom: 4%;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form .InteractiveBox .InputCheckbox {
+    width: 6vh;
+    height: 6vh;
+    bottom: -0.1vw;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm .BottonSubmit {
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 1vw;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .MainContainer .RegisterBox .Footer {
+    bottom: -1vw;
+  }
+
+  .MainContainer .RegisterBox .Footer p {
+    font-size: 1.5vw;
+  }
+
+  .MainContainer .RegisterBox .Footer a {
+    font-size: 1.5vw;
+  }
+
+  /* RIGHT SIDE */
+
+  .MainContainer .DescriptionBox {
+    left: 51%;
+    top: 15%;
+  }
+
+  .MainContainer .DescriptionBox .TextOne {
+    font-size: calc(2rem + 5vh);
+  }
+
+  .MainContainer .DescriptionBox .TextTwo {
+    font-size: calc(2rem + 1.7vh);
+    top: 13.5vh;
+  }
+
+  .MainContainer .DescriptionBox .TextThree {
+    font-size: calc(1rem + 1vh);
+    top: 23vh;
+  }
+
+  .MainContainer .ImageBox .Park {
+    width: calc(650px - 25vw);
+  }
+
+  /* BOX AFTER CORRECT */
+
+  .RegisterAccept {
+    position: relative;
+  }
+
+  .RegisterAccept .ImgBox img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 15vw;
+  }
+
+  .RegisterAccept .ImgBox button {
+    position: absolute;
+    left: 0;
+    bottom: 12vh;
+  }
+
+  .RegisterAccept .FirstText {
+    position: absolute;
+    top: 0;
+    text-align: center;
+  }
+
+  .RegisterAccept h2 {
+    position: absolute;
+    right: 4vw;
+    top: 35vh;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 1000px) and (max-height: 1400px) {
+  .MainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .MainContainer .DescriptionBox {
+    top: 0;
+    left: 8%;
+  }
+
+  .MainContainer .DescriptionBox .TextOne {
+    color: #264d00;
+    font-size: calc(1rem + 3vh);
+  }
+
+  .MainContainer .DescriptionBox .TextTwo {
+    color: #408000;
+    font-size: calc(1rem + 2vh);
+    top: 6.5vh;
+  }
+
+  .MainContainer .DescriptionBox .TextThree {
+    color: #4d9900;
+    font-size: calc(1rem + 0.5vh);
+    top: 12.5vh;
+  }
+
+  .MainContainer .ImageBox .Park {
+    right: 5%;
+  }
+
+  /* REGISTER BOX */
+
+  .MainContainer .RegisterBox {
+    width: 75vw;
+    height: 55vh;
+    margin-right: 0;
+  }
+
+  .MainContainer .RegisterBox .MainText {
+    top: 2vh;
+    font-size: 20px;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form input {
+    height: 4vh;
+    width: 50vw;
+    margin-bottom: 3%;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form .InteractiveBox .InputCheckbox {
+    width: 4.5vh;
+    height: 4.5vh;
+    bottom: -0.2vw;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm .BottonSubmit {
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 1vw;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .MainContainer .RegisterBox .Footer {
+    bottom: -1vw;
+  }
+
+  .MainContainer .RegisterBox .Footer p {
+    font-size: 3vw;
+  }
+
+  .MainContainer .RegisterBox .Footer a {
+    font-size: 3.5vw;
+  }
+
+  /* BOX AFTER REGISTER CORRECT */
+
+  .RegisterAccept {
+    position: relative;
+    height: 40vh;
+    width: 70vw;
+    margin: auto 50%;
+    margin-top: 22vh;
+  }
+
+  .RegisterAccept .FirstText {
+    position: absolute;
+    top: 10%;
+    text-align: center;
+  }
+
+  .RegisterAccept .FirstText h1 {
+    font-size: calc(1rem + 2vw);
+  }
+
+  .RegisterAccept h2 {
+    position: absolute;
+    top: 30%;
+    font-size: calc(1rem + 0.2vw);
+  }
+
+  .RegisterAccept .ImgBox img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 25vw;
+  }
+
+  .RegisterAccept .ImgBox button {
+    position: absolute;
+    bottom: 5vh;
+    left: 12vw;
+    width: 16vh;
+    font-size: calc(1rem + 0.5vh);
+  }
+}
+
+@media (orientation: portrait) and (min-height: 900px) {
+  .MainContainer .RegisterBox .MainText {
+    top: 3vh;
+    font-size: 3.5vh;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 1000px) {
+  .RegisterAccept .FirstText h1 {
+    font-size: calc(2rem + 2vw);
+  }
+
+  .RegisterAccept h2 {
+    position: absolute;
+    top: 27%;
+    font-size: calc(2rem + 1vw);
+  }
+
+  .RegisterAccept .ImgBox img {
+    width: 15vh;
+  }
+
+  .RegisterAccept .ImgBox button {
+    font-size: calc(2rem + 1vw);
+  }
+}
+
+@media (orientation: landscape) and (max-width: 700px) {
+  .RegisterStatus {
+    font-size: calc(0.6rem + 0.7vh);
+    width: 30vw;
+    height: 6vh;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 701px) and (max-width: 1024px) {
+  .RegisterStatus {
+    font-size: calc(0.6rem + 1vh);
+    width: 100%;
+    height: 3vw;
+    padding: 0.4vh;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1025px) and (max-width: 1365px) {
+  .RegisterStatus {
+    font-size: calc(0.5rem + 1vh);
+    width: 25vw;
+    height: 0.5vw;
+    padding: 1vw 2vw;
+  }
+}
+
+@media (orientation: portrait) {
+  .RegisterStatus {
+    font-size: calc(0.2rem + 1vh);
+    width: 50vw;
+    height: 4vh;
+    padding: 0.1vh 1vh;
+  }
+}

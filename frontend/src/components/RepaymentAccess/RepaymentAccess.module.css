@@ -1,0 +1,535 @@
+.SpanView {
+  position: absolute;
+  opacity: 1;
+  animation-name: animos;
+  animation-duration: 1s;
+  bottom: 0;
+  height: 113%;
+  width: 100%;
+}
+
+@keyframes animos {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.SimpleBox {
+  width: 100%;
+  height: 40%;
+}
+
+.SpanView .CalcBox .ResultContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ccb3ff;
+  box-shadow: rgb(0 0 0 / 50%) 0 0.0625em 0.0625em, rgb(0 0 0 / 50%) 0 0.125em 0.5em, rgb(255 255 255 / 10%) 0 0 0 1px inset;
+  height: 90%;
+  left: 0;
+  width: 100%;
+}
+
+.SpanView .CalcBox .ResultContainer .Information {
+  width: 20vw;
+  margin-right: 5%;
+}
+
+.SpanView .CalcBox .ResultContainer .FeedbackBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b9f;
+  cursor: pointer;
+  width: 9vw;
+  height: 9vw;
+  border-radius: 100%;
+  margin-bottom: 10%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 20%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 5vh rgb(0 0 0 / 0%);
+  }
+}
+
+.SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackEmoti {
+  font-size: 5vw;
+  color: #50f;
+}
+
+.SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackText {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  width: 20vw;
+  height: 10vh;
+  border-radius: 2vw;
+  margin-bottom: 30vh;
+  transition: 1s linear;
+}
+
+.SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackText h1 {
+  color: #300c4a;
+  font-size: calc(1rem + 2vw);
+}
+
+.SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription {
+  position: absolute;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  border-left: 4vw solid #9500ff;
+  width: 25vw;
+  border-radius: 2vw;
+  margin-top: 50vh;
+  transition: 1s linear;
+}
+
+.SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription p {
+  color: #302b33;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 2%;
+  font-size: calc(0.5rem + 1vw);
+}
+
+.SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription p span {
+  color: #9500ff;
+}
+
+.SpanView .CalcBox .ResultContainer .WiderFeedback {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 1vw;
+}
+
+.SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+  cursor: pointer;
+  border-radius: 100px 100px 0 0;
+  bottom: 0;
+  width: 40%;
+  height: 3%;
+  opacity: 0.8;
+}
+
+.SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage .ArrowExit {
+  color: #5c5c3d;
+  font-size: 2vw;
+  margin: 50% auto;
+}
+
+.SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage p {
+  color: #5c5c3d;
+  font-size: calc(0.5rem + 0.5vw);
+}
+
+.SpanView .CalcBox .ResultContainer .Information .UpperInfo {
+  display: flex;
+  flex-direction: flex-start;
+  align-items: center;
+  width: 20vw;
+  height: 2%;
+  border-radius: 3px 3px 0 0;
+  box-shadow: rgb(60 64 67 / 30%) 0 1px 2px 0, rgb(60 64 67 / 15%) 0 2px 6px 2px;
+  background-color: #b9f;
+}
+
+.SpanView .CalcBox .ResultContainer .Information .UpperInfo p {
+  font-size: calc(0.5rem + 0.5vw);
+  color: black;
+  margin-left: 4%;
+}
+
+.SpanView .CalcBox .ResultContainer .Information .CenterLine {
+  width: 100%;
+  height: 0.5vh;
+  background-color: #50f;
+}
+
+.SpanView .CalcBox .ResultContainer .BottomData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b9f;
+  border-radius: 0 0 3px 3px;
+  margin-bottom: 13%;
+}
+
+.SpanView .CalcBox .ResultContainer .Information .BottomData p {
+  font-size: calc(1rem + 1.5vw);
+  color: black;
+}
+
+.SpanView .CalcBox .ResultContainer .Information .ButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.SpanView .CalcBox .ResultContainer .Information .ButtonContainer button {
+  width: 17vw;
+  height: 6vh;
+  font-size: calc(1rem + 0.5vw);
+  background-color: #f7f7f7;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  box-shadow: rgb(0 0 0 / 17%) 0 -23px 25px 0 inset, rgb(0 0 0 / 15%) 0 -36px 30px 0 inset, rgb(0 0 0 / 10%) 0 -79px 40px 0 inset, rgb(0 0 0 / 6%) 0 2px 1px, rgb(0 0 0 / 9%) 0 4px 2px, rgb(0 0 0 / 9%) 0 8px 4px, rgb(0 0 0 / 9%) 0 16px 8px, rgb(0 0 0 / 9%) 0 32px 16px;
+  transition: all 0.3s ease;
+}
+
+.SpanView .CalcBox .ResultContainer .Information .ButtonContainer button:hover {
+  transform: scale(1.05);
+}
+
+.SpanView .CalcBox .ResultContainer .Information .ButtonContainer .MobileButton {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (orientation: portrait) {
+  .SpanView .CalcBox .ResultContainer .WiderFeedback {
+    width: 60vw;
+    height: 60vw;
+    margin-top: 40%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage {
+    width: 50%;
+    height: 4%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage .ArrowExit {
+    color: black;
+  }
+
+  .SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage p {
+    color: black;
+    font-size: calc(0.5rem + 0.6vw);
+  }
+
+  .SpanView {
+    top: -14vh;
+  }
+
+  .SpanView .CalcBox .ResultContainer {
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 20%;
+    margin-right: 0;
+    top: 10%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox {
+    width: 18vw;
+    height: 18vw;
+    margin-top: 75%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackEmoti {
+    font-size: 11vw;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackText {
+    display: none;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription {
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 33vh;
+    margin-top: -40vh;
+    transition: none;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription p {
+    margin-left: 3%;
+    font-size: calc(1rem + 0.5vw);
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .SimpleBox {
+    width: 40%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .UpperInfo {
+    width: 100%;
+    height: 50%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .UpperInfo p {
+    font-size: calc(0.5rem + 1.2vw);
+    margin-left: 7%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .BottomData {
+    height: 10vh;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .BottomData p {
+    font-size: calc(1rem + 3vw);
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .ButtonContainer button {
+    display: none;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .ButtonContainer .MobileButton {
+    display: flex;
+    width: 5vh;
+    height: 5vh;
+    margin-top: 80%;
+    background-color: #f7f7f7;
+    color: #50f;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: rgb(0 0 0 / 17%) 0 -23px 25px 0 inset, rgb(0 0 0 / 15%) 0 -36px 30px 0 inset, rgb(0 0 0 / 10%) 0 -79px 40px 0 inset, rgb(0 0 0 / 6%) 0 2px 1px, rgb(0 0 0 / 9%) 0 4px 2px, rgb(0 0 0 / 9%) 0 8px 4px, rgb(0 0 0 / 9%) 0 16px 8px, rgb(0 0 0 / 9%) 0 32px 16px;
+    transition: all 0.3s ease;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .ButtonContainer .MobileButton:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) and (max-height: 700px) {
+  .SimpleBox {
+    width: 100%;
+  }
+
+  .SimpleBox .UpperInfo {
+    width: 100% !important;
+  }
+
+  .SimpleBox .BottomData {
+    height: 15vh !important;
+  }
+
+  .SimpleBox .BottomData p {
+    font-size: calc(1rem + 2.5vw) !important;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information {
+    margin-top: -15vw;
+    width: 30vw !important;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .ButtonContainer button {
+    display: none;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .ButtonContainer .MobileButton {
+    position: absolute;
+    display: flex;
+    width: 4vw;
+    height: 4vw;
+    top: 5%;
+    left: 5%;
+    background-color: #f7f7f7;
+    color: #50f;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: rgb(0 0 0 / 17%) 0 -23px 25px 0 inset, rgb(0 0 0 / 15%) 0 -36px 30px 0 inset, rgb(0 0 0 / 10%) 0 -79px 40px 0 inset, rgb(0 0 0 / 6%) 0 2px 1px, rgb(0 0 0 / 9%) 0 4px 2px, rgb(0 0 0 / 9%) 0 8px 4px, rgb(0 0 0 / 9%) 0 16px 8px, rgb(0 0 0 / 9%) 0 32px 16px;
+    transition: all 0.3s ease;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .ButtonContainer .MobileButton:hover {
+    transform: scale(1.05);
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox {
+    margin-bottom: 20vw;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackText {
+    display: none;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription {
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 50vw;
+    margin-bottom: -23vw;
+    left: -42vw;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription p {
+    margin-left: 2%;
+    font-size: calc(0.7rem + 0.7vw);
+  }
+
+  .SpanView .CalcBox .ResultContainer .WiderFeedback {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    margin-top: -10vh;
+    margin-bottom: -10vh;
+  }
+
+  .SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage {
+    width: 70%;
+    height: 4%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage .ArrowExit {
+    color: black;
+    font-size: 4vw;
+  }
+
+  .SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage p {
+    color: black;
+    font-size: calc(0.6rem + 0.4vw);
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1280px) {
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackText {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 632px) and (max-height: 814px) {
+  .SpanView .CalcBox .ResultContainer .Information {
+    top: 5%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .ButtonContainer .MobileButton {
+    width: 7vh;
+    height: 7vh;
+    margin-top: 40%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox {
+    position: absolute;
+    margin-top: 90%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription {
+    width: 40vh;
+    margin-bottom: 1vh;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription p {
+    font-size: calc(1rem + 0.7vw);
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .UpperInfo {
+    height: 80%;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 470px) and (max-height: 850px) {
+  .SpanView {
+    top: -15vh;
+  }
+
+  .SpanView .CalcBox .ResultContainer {
+    height: 70vh;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information {
+    position: absolute;
+    margin-bottom: 100%;
+    height: 40vh;
+    flex-direction: column;
+    top: 0;
+    padding-top: 5%;
+  }
+
+  .SimpleBox {
+    width: 95% !important;
+    margin-left: 2.5%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .UpperInfo {
+    display: flex;
+    flex-direction: flex-start;
+    align-items: center;
+    height: 30%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .Information .ButtonContainer .MobileButton {
+    width: 7vh;
+    height: 7vh;
+    margin-top: 5%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackEmoti {
+    font-size: 8vw;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox {
+    width: 14vw;
+    height: 14vw;
+    margin-top: 57vh;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription {
+    width: 60vw;
+    margin-bottom: -14vh;
+  }
+
+  .SpanView .CalcBox .ResultContainer .FeedbackBox .FeedbackDescription p {
+    margin-left: 2%;
+    font-size: calc(0.5rem + 0.6vw);
+  }
+
+  .SpanView .CalcBox .ResultContainer .WiderFeedback {
+    width: 125%;
+    height: 100vh;
+    margin-top: -13vh;
+    margin-bottom: -8vh;
+  }
+
+  .SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage {
+    width: 70%;
+    height: 3%;
+  }
+
+  .SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage .ArrowExit {
+    font-size: 6vw;
+  }
+
+  .SpanView .CalcBox .ResultContainer .WiderFeedback .ExitFeedbackPage p {
+    font-size: calc(0.6rem + 0.7vw);
+  }
+}

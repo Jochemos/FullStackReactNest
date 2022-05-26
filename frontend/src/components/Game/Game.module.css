@@ -1,0 +1,70 @@
+.GameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 85%;
+  width: 80%;
+  border-radius: 80px;
+  background: white;
+  overflow: hidden;
+}
+
+.GameContainer .Fish {
+  position: absolute;
+  font-size: calc(1rem + 6vh);
+  top: 4vw;
+  color: #ffd700;
+  z-index: 999;
+  transition: transform 1s;
+}
+
+.GameContainer .Trap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 20px;
+}
+
+.GameContainer .Trap .Hook {
+  transform: rotateZ(70deg);
+  width: 100%;
+}
+
+.GameContainer .Trap .Line {
+  width: 3px;
+  height: 100%;
+  background: black;
+}
+
+.GameContainer .Stone {
+  position: relative;
+}
+
+.GameContainer .Score {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  width: 15%;
+  height: 15%;
+  background: #b0c4e6;
+  border-radius: 0 0 0 100px;
+  font-size: 150%;
+  top: 0;
+  right: 0;
+}
+
+@media (orientation: portrait) {
+  .GameContainer {
+    background-size: cover !important;
+  }
+
+  .GameContainer .Stone {
+    height: 20vh !important;
+    width: 20vh !important;
+  }
+}

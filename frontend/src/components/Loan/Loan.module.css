@@ -1,0 +1,140 @@
+.YouTube {
+  background-color: #ffa31a;
+  position: relative;
+}
+
+.YouTube .Background {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  z-index: 0;
+}
+
+.YouTube .YouTubeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.YouTube .Videos {
+  width: 70%;
+  z-index: 1;
+}
+
+.YouTube .Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-top: 5vh;
+  width: 100%;
+  padding-bottom: 8vw;
+}
+
+.YouTube .Button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #630;
+  text-decoration: none;
+  font-family: "Amatic SC", cursive;
+  font-size: calc(1rem + 2vw);
+  text-align: center;
+  padding: 1% 5%;
+  background-color: #ead57e;
+  box-shadow: 0 0 5px 1px white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.YouTube .Button:active {
+  transform: scale(0.95);
+  transition: all 10ms;
+}
+
+.YouTube .Paragraph {
+  padding-top: 10px;
+  width: 65%;
+  z-index: 0;
+  background-color: #ffb84d;
+  box-shadow: 0 0 5px 1px white;
+  border-radius: 10px 10px 0 0;
+}
+
+.YouTube .Paragraph p {
+  color: #630;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.YouTube .VideoContainer .Thumbnail img {
+  max-width: 498px;
+  width: 100%;
+}
+
+.YouTube .VideoContainer .Text {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  width: 45%;
+}
+
+.YouTube .VideoContainer .Thumbnail {
+  padding: 2.5%;
+  position: relative;
+  width: 45%;
+}
+
+.YouTube .VideoContainer .PlayBtnContainer {
+  position: absolute;
+}
+
+.YouTube .VideoContainer .PlayBtnContainer .PlayButton {
+  margin-top: 11%;
+  margin-left: 40%;
+  max-width: 18%;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 1s;
+}
+
+.YouTube .VideoContainer .PlayBtnContainer .PlayButton:hover {
+  transform: scale(1.2);
+  transition: all 1s;
+}
+
+.YouTube .Videos .VideoContainer {
+  display: flex;
+  background: #0c6;
+  margin-bottom: 5%;
+  height: 100%;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px white;
+}
+
+@media (max-width: 756px) {
+  .YouTube .Videos .VideoContainer {
+    flex-direction: column;
+  }
+
+  .YouTube .VideoContainer .Text {
+    width: 80%;
+  }
+
+  .YouTube .VideoContainer .Thumbnail {
+    width: 80%;
+    padding-top: 7%;
+  }
+
+  .YouTube .Button a {
+    padding: 3% 7%;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 545px) {
+  .YouTube .Button a {
+    padding: 3vw;
+  }
+}

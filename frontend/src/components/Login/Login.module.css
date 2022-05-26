@@ -1,0 +1,344 @@
+.MainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #d9d9d9 50%, #6cf 50%);
+}
+
+.MainContainer .LoginContainer {
+  height: 75vh;
+  min-height: 300px;
+  width: 70%;
+  background: linear-gradient(to right, #3bf 50%, #bfbfbf 50%);
+  border-radius: 1rem;
+  margin: 2rem auto;
+  box-shadow: 0.5rem 0.5rem 4rem -0.5rem #00334d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.MainContainer .LoginContainer .LeftSide {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0.8rem 0.8rem 6rem -1rem #046;
+  border-radius: 0.5rem;
+  height: 85%;
+  width: 42%;
+}
+
+.MainContainer .LoginContainer .LeftSide img {
+  position: absolute;
+  width: 100%;
+  bottom: 50%;
+}
+
+.MainContainer .LoginContainer .LeftSide h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: calc(1rem + 4vw);
+  padding-bottom: 5vh;
+}
+
+.MainContainer .LoginContainer .RightSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  box-shadow: 0.8rem 0.8rem 6rem -0.5rem #333;
+  height: 85%;
+  width: 42%;
+}
+
+.MainContainer .LoginContainer .RightSide .VisibleForMobile {
+  display: none;
+}
+
+.MainContainer .LoginContainer .RightSide form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 12vh;
+}
+
+.MainContainer .LoginContainer .RightSide input {
+  border: none;
+  height: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  transition: all 0.3s ease;
+}
+
+.MainContainer .LoginContainer .RightSide form input:focus {
+  outline: none;
+  border: none;
+}
+
+.MainContainer .LoginContainer .RightSide form input:hover {
+  outline: 0.5px solid #1ab2ff;
+  box-shadow: 2px 2px 9px -1px #1ab2ff;
+}
+
+.MainContainer .LoginContainer .RightSide label {
+  color: #333;
+  margin-left: 10%;
+  margin-bottom: 3%;
+  font-size: small;
+}
+
+.MainContainer .LoginContainer .RightSide button {
+  color: #1a1a1a;
+  background-color: #1ab2ff;
+  box-shadow: rgb(0 0 0 / 16%) 0 1px 4px;
+  margin-top: 3%;
+  margin-left: 8%;
+  margin-right: 8%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.MainContainer .LoginContainer .RightSide button:hover {
+  box-shadow: 2px 2px 9px -1px gray;
+  transform: translateX(-5px);
+  z-index: 0;
+}
+
+.MainContainer .LoginContainer .RightSide .RegisterNow {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.MainContainer .LoginContainer .RightSide .RegisterNow a {
+  color: #0099e6;
+  text-decoration: none;
+}
+
+.MainContainer .LoginContainer .RightSide .RegisterNow h4 {
+  color: #0d0d0d;
+}
+
+.AlertBoxContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AlertBoxContainer .AlertBox {
+  position: absolute;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  top: 1vw;
+  width: 25vw;
+  height: 37px;
+  border-radius: 5px;
+  background-color: #ff531a;
+  box-shadow: rgb(0 0 0 / 2%) 0 1px 3px 0, rgb(27 31 35 / 15%) 0 0 0 1px;
+  animation-name: animos;
+  animation-duration: 0.7s;
+}
+
+@keyframes animos {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.AlertBoxContainer .AlertBox h1 {
+  font-size: calc(0.5rem + 1vw);
+  color: white;
+  animation-name: animosMaximos;
+  animation-duration: 1.2s;
+}
+
+@keyframes animosMaximos {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* CHANGE VIEW AFTER SMALL WIDE */
+
+@media (orientation: portrait) and (max-height: 900px) {
+  .MainContainer .LoginContainer {
+    height: 75vh;
+    width: 80vw;
+  }
+
+  .MainContainer .LoginContainer .LeftSide {
+    display: none;
+  }
+
+  .MainContainer .LoginContainer .RightSide {
+    position: relative;
+    height: 35vh;
+    width: 67vw;
+    background-color: #3bf;
+    padding-top: 4vw;
+    margin-top: 15vw;
+  }
+
+  .MainContainer .LoginContainer .RightSide input {
+    border: none;
+    height: 5vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+  }
+
+  .MainContainer .LoginContainer .RightSide button {
+    background-color: #4dc3ff;
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+
+  .AlertBoxContainer {
+    position: absolute;
+    top: 0;
+  }
+
+  .AlertBoxContainer .AlertBox {
+    top: 1vh;
+    width: 45vw;
+    height: 5vh;
+  }
+
+  .MainContainer .LoginContainer .RightSide .RegisterNow {
+    margin-top: 3.5vh;
+  }
+
+  .MainContainer .LoginContainer .RightSide .VisibleForMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    height: 100%;
+  }
+
+  .MainContainer .LoginContainer .RightSide .VisibleForMobile img {
+    position: absolute;
+    height: 14vh;
+    top: -20.5vh;
+  }
+
+  .MainContainer .LoginContainer .RightSide .VisibleForMobile h1 {
+    font-family: "Amatic SC", cursive;
+    font-size: calc(1rem + 4vw);
+    position: absolute;
+    top: -9vh;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 901px) {
+  .MainContainer .LoginContainer {
+    height: 75vh;
+    width: 80vw;
+  }
+
+  .MainContainer .LoginContainer .LeftSide {
+    display: none;
+  }
+
+  .MainContainer .LoginContainer .RightSide {
+    position: relative;
+    height: 35vh;
+    width: 67vw;
+    background-color: #3bf;
+    padding-top: 4vw;
+    margin-top: 15vw;
+  }
+
+  .MainContainer .LoginContainer .RightSide input {
+    border: none;
+    height: 5vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+  }
+
+  .MainContainer .LoginContainer .RightSide button {
+    background-color: #4dc3ff;
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+
+  .AlertBoxContainer {
+    position: absolute;
+    top: 0;
+  }
+
+  .AlertBoxContainer .AlertBox {
+    top: 1vh;
+    width: 45vw;
+    height: 5vh;
+  }
+
+  .MainContainer .LoginContainer .RightSide .RegisterNow {
+    margin-top: 6.5vh;
+  }
+
+  .MainContainer .LoginContainer .RightSide .VisibleForMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    height: 100%;
+  }
+
+  .MainContainer .LoginContainer .RightSide .VisibleForMobile img {
+    position: absolute;
+    height: 25vw;
+    top: -35vw;
+  }
+
+  .MainContainer .LoginContainer .RightSide .VisibleForMobile h1 {
+    font-family: "Amatic SC", cursive;
+    font-size: calc(1rem + 6vw);
+    position: absolute;
+    top: -15vw;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 499px) {
+  .MainContainer .LoginContainer .RightSide {
+    position: relative;
+  }
+
+  .MainContainer .LoginContainer .RightSide .RegisterNow {
+    position: absolute;
+    bottom: -2vh;
+  }
+
+  .MainContainer .LoginContainer .RightSide .RegisterNow a {
+    font-size: 2.5vh;
+  }
+
+  .MainContainer .LoginContainer .RightSide .RegisterNow h4 {
+    font-size: 2.5vh;
+  }
+
+  .AlertBoxContainer .AlertBox {
+    top: 0;
+    width: 25vw;
+    height: 40px;
+  }
+}

@@ -1,0 +1,46 @@
+.AboutMe {
+  background-color: #008060;
+  padding-bottom: 5%;
+}
+
+.AboutMe .Container {
+  display: flex;
+}
+
+.AboutMe .Container .Text {
+  width: 47%;
+  margin-left: 3%;
+}
+
+.AboutMe .Container .Text h2 {
+  font-weight: 900;
+  font-size: calc(1rem + 2vw);
+}
+
+.AboutMe .Container .Photo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AboutMe .Container .Photo .Face {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10%;
+}
+
+@media (max-width: 500px) {
+  .AboutMe .Container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .AboutMe .Container .Text {
+    width: 80%;
+  }
+
+  .AboutMe .Container .Photo {
+    width: 70%;
+  }
+}

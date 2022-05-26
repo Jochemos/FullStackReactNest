@@ -1,0 +1,290 @@
+.NavBar {
+  background: #124345;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavBar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0.9;
+}
+
+.NavBar nav ul li {
+  display: inline-block;
+  margin: 1.5vw;
+}
+
+.NavBar nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.NavBar a:hover {
+  border-bottom: 3px solid #3c71ee;
+  color: #77e9ff;
+}
+
+.NavBar nav ul .LoggedBox {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100px;
+  z-index: 999;
+}
+
+.NavBar nav ul .LoggedBox .AccountViewMobile {
+  display: none;
+}
+
+.NavBar nav ul .LoggedBox .AccountView {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavBar nav ul .LoggedBox .AccountView .ProfileLink {
+  font-size: 3.5vw;
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
+
+.NavBar nav ul .LoggedBox .AccountView .OptionsTooltip {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  top: -5px;
+  width: 120px;
+  background-color: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px 0;
+  padding-bottom: 5px;
+  right: 4.5vw;
+}
+
+.NavBar nav ul .LoggedBox .AccountView .OptionsTooltip .ExitBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+
+.NavBar nav ul .LoggedBox .AccountView .OptionsTooltip .ExitBox svg {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.NavBar nav ul .LoggedBox .AccountView .OptionsTooltip .DivideLine {
+  padding-top: 5px;
+  width: 80%;
+}
+
+.NavBar nav ul .LoggedBox .AccountView .OptionsTooltip .DivideLine hr {
+  height: 1px;
+  background-color: grey;
+  border: none;
+}
+
+.NavBar nav ul .LoggedBox .AccountView .OptionsTooltip .LinkBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  border-radius: 10px;
+  width: 110px;
+  height: 50px;
+  margin-top: 5px;
+}
+
+.NavBar nav ul .LoggedBox .AccountView .OptionsTooltip .LinkBox a {
+  text-decoration: none;
+  border-bottom: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+w .NavBar nav ul .LoggedBox .AccountView .OptionsTooltip .LinkBox a:hover {
+  cursor: pointer;
+}
+
+.NavBar nav ul .LoggedBox .AccountView .OptionsTooltip .LinkBox p {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.NavBar nav ul .LoggedBox .AccountView .OptionsTooltip .LinkBox p:hover {
+  cursor: pointer;
+  color: #f30;
+}
+
+.NavBar nav ul .LoggedBox .AccountView .ArrowBeside {
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #0d0d0d;
+  right: 3.5vw;
+}
+
+.NavBar .MobileNavigation {
+  display: none;
+}
+
+@media (orientation: landscape) and (max-width: 960px) {
+  .NavBar nav ul .LoggedBox .AccountView .ArrowBeside {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #0d0d0d;
+    right: 3.5vw;
+  }
+}
+
+@media (orientation: portrait) {
+  .NavBar {
+    background: none;
+  }
+
+  .NavBar .Navigation {
+    display: none;
+  }
+
+  .NavBar .MobileNavigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .NavBar .MobileNavigation .HamburgerOpen {
+    position: absolute;
+    right: 4%;
+    cursor: pointer;
+    background: #648c11;
+    opacity: 0.9;
+    border-radius: 5px;
+    padding: 1%;
+  }
+
+  .NavBar .MobileNavigation .HamburgerClose {
+    color: white;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .NavBar nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    background-color: #648c11;
+    border-right: 5px solid #00b7eb;
+    border-radius: 0 0 0 30px;
+    padding-bottom: 4%;
+    animation-name: getLeft;
+    animation-duration: 0.8s;
+  }
+
+  @keyframes getLeft {
+    from {
+      right: -40%;
+    }
+
+    to {
+      right: 0;
+    }
+  }
+
+  .NavBar nav ul li {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .NavBar nav ul li a {
+    font-size: calc(0.5rem + 2vh);
+  }
+
+  .NavBar a:hover {
+    border-bottom: none;
+  }
+
+  .NavBar nav ul .LoggedBox {
+    position: relative;
+    top: 1vh;
+    height: 50%;
+    width: 100px;
+    z-index: 999;
+    margin: auto;
+  }
+
+  .NavBar nav ul .LoggedBox .AccountView {
+    display: none;
+  }
+
+  .NavBar nav ul .LoggedBox .AccountViewMobile {
+    display: flex;
+  }
+
+  .NavBar nav ul .LoggedBox .AccountViewMobile a {
+    font-size: 5vh;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 1000px) {
+  .NavBar nav ul li {
+    margin-top: 7vh;
+    margin-bottom: -2vh;
+  }
+
+  .NavBar nav ul .LoggedBox {
+    top: 8vh;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 900px) {
+  .NavBar nav ul li {
+    margin-top: 9vh;
+    margin-bottom: -5vh;
+  }
+
+  .NavBar nav ul {
+    padding-bottom: 23%;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 740px) {
+  .NavBar nav ul li {
+    margin-top: 10vh;
+    margin-bottom: -5vh;
+  }
+
+  .NavBar nav ul {
+    padding-bottom: 26%;
+  }
+
+  .NavBar nav ul .LoggedBox {
+    top: 9vh;
+  }
+}

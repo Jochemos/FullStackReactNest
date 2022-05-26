@@ -1,0 +1,36 @@
+.Container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2%;
+}
+
+.Container hr {
+  position: absolute;
+  left: 0;
+  height: 10px;
+  color: #001a13;
+  background-image: linear-gradient(to bottom left, transparent, transparent 25%, currentcolor 25%, currentcolor 50%, transparent 50%, transparent 75%, currentcolor 75%);
+  background-image: linear-gradient(to bottom left, transparent, transparent 25%, currentcolor 25%, currentcolor 50%, transparent 50%, transparent 75%, currentcolor 75%);
+  background-image: linear-gradient(to top right, transparent, transparent 25%, currentcolor 25%, currentcolor 50%, transparent 50%, transparent 75%, currentcolor 75%);
+  background-size: 10px 10px;
+  width: 15%;
+  border: none;
+}
+
+.Container h1 {
+  color: #d6f5f5;
+}
+
+@media (max-width: 400px) {
+  .Container hr {
+    width: 12%;
+  }
+}
+
+@media (max-width: 375px) {
+  .Container hr {
+    display: none;
+  }
+}
