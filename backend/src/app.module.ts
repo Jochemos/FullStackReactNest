@@ -6,12 +6,23 @@ import CommentEntity from 'database/entities/user.entity';
 import RegisterEntity from 'database/entities/register.entity';
 import RegisterModule from 'src/auth/register/register.module';
 import MemberModule from 'src/member/member.module';
+import * as Joi from 'joi';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: ['database/.config.env', '.base.env'],
+      validationSchema: Joi.object({
+        NODE_ENV: Joi.string()
+          .valid('development', 'production', 'test', 'provision')
+          .default('development'),
+        PORT: Joi.number().default(7072),
+      }),
+      validationOptions: {
+        allowUnknown: true,
+        abortEarly: true,
+      },
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
