@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e0116ce9.css",
+    "main.js": "/static/js/main.41647aa1.js",
+    "static/media/parrot.png": "/static/media/parrot.ff72bcc3379865c3a005.png",
+    "static/media/plaza.jpg": "/static/media/plaza.db920eec3eddcdc2215d.jpg",
+    "static/media/yacht.png": "/static/media/yacht.bf4951296c42f7122850.png",
+    "static/media/face.jpg": "/static/media/face.ae2e1c0b716e6e0e2611.jpg",
+    "static/media/beach.jpg": "/static/media/beach.36efaf4d2b96322dc43d.jpg",
+    "static/media/be.jpg": "/static/media/be.6300bc059e42bd1bdaca.jpg",
+    "static/media/coral.png": "/static/media/coral.8b3c0bf5c22de7cb1047.png",
+    "static/media/vacation.jpg": "/static/media/vacation.251dcff1be109ab1e8cf.jpg",
+    "static/media/CompMedium.jpg": "/static/media/CompMedium.e026f420436aa5c2655d.jpg",
+    "static/media/credit.jpg": "/static/media/credit.b1d81a2292069fedfbde.jpg",
+    "static/media/reef.jpg": "/static/media/reef.cf5cd61af3d884a297c1.jpg",
+    "static/media/way.svg": "/static/media/way.3c6e92aa04ff7d7cf91946ef3e20ae6e.svg",
+    "static/media/desk.png": "/static/media/desk.a7249b7bf37c8a1c4a03.png",
+    "static/media/oneOfUs2.png": "/static/media/oneOfUs2.e1647dce7c527fc4e5d6.png",
+    "static/media/play-button.png": "/static/media/play-button.0c4d02430639638583a1.png",
+    "static/media/park.svg": "/static/media/park.4787e0a7aabe4105773323cffd39b26c.svg",
+    "static/media/hello.svg": "/static/media/hello.1511eb1fdb142a221648910cdbc97f95.svg",
+    "index.html": "/index.html",
+    "main.e0116ce9.css.map": "/static/css/main.e0116ce9.css.map",
+    "main.41647aa1.js.map": "/static/js/main.41647aa1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0116ce9.css",
+    "static/js/main.41647aa1.js"
+  ]
+}
