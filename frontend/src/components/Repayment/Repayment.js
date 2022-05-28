@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AuthorizationAccept from './../RepaymentAccess/RepaymentAccess.js';
-import axios from 'axios';
+import Axios from '../../api/Axios.js';
 import { FiPercent } from 'react-icons/fi';
 import { MdAccessTime, MdAttachMoney } from 'react-icons/md';
 import { RiAlertLine } from 'react-icons/ri';
@@ -60,7 +60,7 @@ function Repayment() {
 
     const loan = () => {
 
-        axios.post('http://localhost:7072/v2/repayment', {
+        Axios.post('/repayment', {
             'amountOfCredit': Number(amount),
             'repaymentPeriod': Number(time),
             'nominalInterest': Number(nominalInterest),

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { FiMail } from 'react-icons/fi';
 import { GiLoveLetter } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import Axios from '../../api/Axios.js';
 import classes from './Feedback.module.css';
 
 
@@ -18,7 +18,7 @@ const Feedback = () => {
     useEffect(() => {
 
         const getData = async () => {
-            await axios.get(`http://localhost:7072/v2/${firstName}.${lastName}/allcomments`, { withCredentials: true })
+            await Axios.get(`/${firstName}.${lastName}/allcomments`, { withCredentials: true })
                 .then((response) => {
                     setData({'users': response.data});
                 })
@@ -41,7 +41,7 @@ const Feedback = () => {
     const [modalFinal, setModalFinal] = useState('');
 
     const addComment = () => {
-        axios.put(`http://localhost:7072/v2/${firstName}.${lastName}/addcomment`, {
+        Axios.put(`/${firstName}.${lastName}/addcomment`, {
             'comment': comment
         }, { withCredentials: true }).then((response) => {
             if(response.status === 200) {

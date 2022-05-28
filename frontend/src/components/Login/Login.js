@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import ModalLogin from './../LoginCorrect/LoginCorrect.js';
-import axios from 'axios';
+import Axios from '../../api/Axios.js';
 import hello from './../../img/hello.svg';
 import classes from './Login.module.css';
 
@@ -17,7 +17,7 @@ const Login = () => {
     const [openModal, setOpenModal] = useState(false);
 
     const loginClick = () => {
-        axios.post('http://localhost:7072/v2/anonymous/login', {
+        Axios.post('/anonymous/login', {
             'email': email,
             'password': password
         }, { withCredentials: true }).then((response) => {

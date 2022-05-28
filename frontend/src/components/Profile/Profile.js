@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import Axios from '../../api/Axios.js';
 import { GiBoatFishing, GiHills, GiMountainRoad, GiPalmTree } from 'react-icons/gi';
 import { BsCreditCard2Back, BsMenuButtonWide } from 'react-icons/bs';
 import { BiLogOut } from 'react-icons/bi';
@@ -76,7 +76,7 @@ const Profile = () => {
 
 
         const getData = async () => {
-            await axios.get(`http://localhost:7072/v2/${firstName}.${lastName}/profile`, { withCredentials: switchKey() })
+            await Axios.get(`/${firstName}.${lastName}/profile`, { withCredentials: switchKey() })
                 .then((response) => {
                     setData({'user': response.data.data});
                 })

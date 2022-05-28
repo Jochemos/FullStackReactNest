@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import RegisterStringChange from './RegisterStringChange.js';
-import axios from 'axios';
+import Axios from '../../api/Axios.js';
 import oneOfUs from './../../img/oneOfUs2.png';
 import park from './../../img/park.svg';
 import classes from './Register.module.css';
@@ -49,7 +49,7 @@ function Register() {
     const [appearBox, setAppearBox] = useState('');
 
     const registerClick = () => {
-        axios.post('http://localhost:7072/v2/anonymous/register', {
+        Axios.post('/anonymous/register', {
             'firstName': firstName,
             'lastName': lastName,
             'email': email,
