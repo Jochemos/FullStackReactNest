@@ -195,6 +195,7 @@
     background-color: #3bf;
     padding-top: 4vw;
     margin-top: 15vw;
+    min-height: 190px;
   }
 
   .MainContainer .LoginContainer .RightSide input {
@@ -318,6 +319,48 @@
   }
 }
 
+@media (orientation: portrait) and (max-height: 600px) {
+  .MainContainer .LoginContainer .RightSide .VisibleForMobile img {
+    top: -15vh;
+  }
+
+  .MainContainer .LoginContainer .RightSide .VisibleForMobile h1 {
+    display: none;
+  }
+
+  .MainContainer .LoginContainer .RightSide .RegisterNow {
+    margin-top: 2.5vh;
+  }
+
+  .MainContainer .LoginContainer .RightSide .RegisterNow h4 {
+    font-size: 10px;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 450px) {
+  .MainContainer .LoginContainer .RightSide input {
+    min-height: 20px;
+    max-height: 30px;
+  }
+
+  .AlertBoxContainer .AlertBox {
+    width: 45vw;
+    height: 28px;
+  }
+
+  .MainContainer .LoginContainer .RightSide .RegisterNow {
+    margin-top: 12vh;
+  }
+
+  .MainContainer .LoginContainer .RightSide .RegisterNow h4 {
+    font-size: 10px;
+  }
+
+  .MainContainer .LoginContainer .RightSide form {
+    margin-top: 20%;
+  }
+}
+
 @media (orientation: landscape) and (max-height: 499px) {
   .MainContainer .LoginContainer .RightSide {
     position: relative;
@@ -340,5 +383,43 @@
     top: 0;
     width: 25vw;
     height: 40px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 320px) {
+  .MainContainer .LoginContainer {
+    margin-top: 24vh;
+  }
+
+  .AlertBoxContainer .AlertBox {
+    top: -4vh;
+    width: 25vw;
+    height: 35px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 240px) {
+  .MainContainer .LoginContainer {
+    margin-top: 62vh;
+  }
+
+  .MainContainer .LoginContainer .RightSide .RegisterNow {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 200px) {
+  .MainContainer .LoginContainer {
+    margin-top: 100vh;
+  }
+
+  .AlertBoxContainer .AlertBox {
+    top: -12vh;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 170px) {
+  .MainContainer .LoginContainer {
+    margin-top: 150vh;
   }
 }

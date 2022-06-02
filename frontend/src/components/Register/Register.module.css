@@ -112,7 +112,6 @@
   align-items: center;
   background: linear-gradient(to right, #690, #bfff80);
   height: 44vw;
-  min-height: 320px;
   width: 40%;
   margin-right: 50%;
   border-radius: 2rem;
@@ -448,6 +447,15 @@
   }
 }
 
+@media (orientation: portrait) {
+  .RegisterStatus {
+    font-size: calc(0.2rem + 1vh);
+    width: 50vw;
+    height: 4vh;
+    padding: 0.1vh 1vh;
+  }
+}
+
 @media (orientation: portrait) and (max-width: 1000px) and (max-height: 1400px) {
   .MainContainer {
     display: flex;
@@ -567,6 +575,45 @@
   }
 }
 
+@media (orientation: portrait) and (max-width: 500px) {
+  .MainContainer .RegisterBox {
+    min-height: 320px;
+    max-height: 350px;
+  }
+
+  .RegisterAccept {
+    min-height: 320px;
+    max-height: 350px;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form input {
+    height: 23px;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form .InteractiveBox .InputCheckbox {
+    height: 26px;
+    width: 26px;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 520px) {
+  .MainContainer .DescriptionBox {
+    display: none;
+  }
+
+  .MainContainer .ImageBox .Park {
+    display: none;
+  }
+
+  .MainContainer .RegisterBox {
+    margin-top: 20px;
+  }
+
+  .RegisterAccept {
+    margin-top: 20px;
+  }
+}
+
 @media (orientation: portrait) and (min-height: 900px) {
   .MainContainer .RegisterBox .MainText {
     top: 3vh;
@@ -594,6 +641,48 @@
   }
 }
 
+@media (orientation: landscape) and (max-height: 400px) {
+  .MainContainer .RegisterBox {
+    min-height: 320px;
+    max-height: 380px;
+    margin-top: 30px;
+  }
+
+  .RegisterAccept {
+    min-height: 320px;
+    max-height: 380px;
+    margin-top: 30px;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form input {
+    height: 23px;
+  }
+
+  .MainContainer .RegisterBox .RegisterForm form .InteractiveBox .InputCheckbox {
+    height: 26px;
+    width: 26px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 400px) {
+  .MainContainer .DescriptionBox .TextOne {
+    top: 5px;
+  }
+
+  .MainContainer .DescriptionBox .TextTwo {
+    top: 65px;
+  }
+
+  .MainContainer .DescriptionBox .TextThree {
+    top: 120px;
+  }
+
+  .MainContainer .ImageBox .Park {
+    width: 300px;
+    bottom: -10vh;
+  }
+}
+
 @media (orientation: landscape) and (max-width: 700px) {
   .RegisterStatus {
     font-size: calc(0.6rem + 0.7vh);
@@ -617,14 +706,5 @@
     width: 25vw;
     height: 0.5vw;
     padding: 1vw 2vw;
-  }
-}
-
-@media (orientation: portrait) {
-  .RegisterStatus {
-    font-size: calc(0.2rem + 1vh);
-    width: 50vw;
-    height: 4vh;
-    padding: 0.1vh 1vh;
   }
 }

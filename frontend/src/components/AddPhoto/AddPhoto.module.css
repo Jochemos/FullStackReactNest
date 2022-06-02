@@ -8,8 +8,8 @@
 }
 
 .UserPhotoContainer .ImgPrev {
-  width: 25vw;
-  height: 25vw;
+  width: 24vw;
+  height: 24vw;
   border-radius: 100%;
   display: flex;
   flex-direction: column;

@@ -299,6 +299,13 @@
   font-size: calc(0.5rem + 0.3vw);
 }
 
+@media (orientation: landscape) and (min-width: 1280px) {
+  .MainContentBox .BaseContent .User .UserInfo h1 {
+    margin-bottom: 0 !important;
+    padding: 0.5% !important;
+  }
+}
+
 @media (orientation: landscape) and (max-width: 1280px) {
   .MainContentBox .SideContent .Button {
     width: 100%;

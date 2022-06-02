@@ -104,16 +104,25 @@ const Game = () => {
     useEffect(() => {
 
         const hasCatch = fishPosition >= 0 && fishPosition < trapHeight && trapLeft < 10;
-        const fishDown = fishPosition >= 80;
+        const fishDown = fishPosition >= 90;
 
         if(hasCatch){
+
+            document.getElementById('theFish').style.transform = 'rotate(-60deg)';
+            document.getElementById('startButton').style.display = 'flex';
+
             setGameStarted(false);
             setFishPosition(50);
-            setTrapHeight(50);
+            setTrapHeight(52);
+            setTrapLeft(6);
             setScore(0);
         }
 
         if(fishDown) {
+
+            document.getElementById('theFish').style.transform = 'rotate(-60deg)';
+            document.getElementById('startButton').style.display = 'flex';
+
             setScore(0);
         }
 
@@ -126,14 +135,19 @@ const Game = () => {
     const getUp = () => {
         let newFishPosition = fishPosition - 24;
         document.getElementById('theFish').style.transform = 'rotate(-400deg)';
+        document.getElementById('startButton').style.display = 'none';
 
         if(!gameStarted){
             setGameStarted(true);
+            setTrapLeft(100);
         }else if(newFishPosition < 0) {
             setFishPosition(0);
-        } else {
+        }else{
             setFishPosition(newFishPosition);
         }
+
+        setFishPosition(newFishPosition);
+
 
 
     };
@@ -141,6 +155,9 @@ const Game = () => {
 
     return (
         <div className={classes.GameContainer} onClick={getUp} id="gameContainer">
+            <div className={classes.TapStart} id="startButton" onClick={getUp}>
+                <span className={classes.PulseButton} id="startButton">TAP !</span>
+            </div>
             <div className={classes.Trap} id="trap">
                 <div className={classes.Line}></div>
                 <GiFishingHook className={classes.Hook} />

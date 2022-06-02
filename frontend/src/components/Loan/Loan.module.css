@@ -79,6 +79,10 @@
   width: 45%;
 }
 
+.YouTube .VideoContainer .Text p {
+  color: #002147;
+}
+
 .YouTube .VideoContainer .Thumbnail {
   padding: 2.5%;
   position: relative;
@@ -105,12 +109,13 @@
 
 .YouTube .Videos .VideoContainer {
   display: flex;
-  background: #0c6;
+  background: #78b4ab;
   margin-bottom: 5%;
   height: 100%;
   align-items: center;
   border-radius: 10px;
   box-shadow: 0 0 5px 1px white;
+  color: black;
 }
 
 @media (max-width: 756px) {
