@@ -112,6 +112,7 @@
   align-items: center;
   background: linear-gradient(to right, #690, #bfff80);
   height: 44vw;
+  min-height: 320px;
   width: 40%;
   margin-right: 50%;
   border-radius: 2rem;
